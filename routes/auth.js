@@ -15,7 +15,7 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-// Register
+// Signup
 router.post('/signup', async (req, res) => {
     const { email, password } = req.body;
 
@@ -70,7 +70,7 @@ router.post('/verify-otp', async (req, res) => {
     }
 });
 
-// Login
+// signin
 router.post('/signin', async (req, res) => {
     const { email, password } = req.body;
 
