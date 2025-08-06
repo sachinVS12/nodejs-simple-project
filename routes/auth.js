@@ -91,4 +91,18 @@ router.post('/signin', async (req, res) => {
     }
 });
 
+app.post("signup", async (req, res) => {
+    const { email, password } = req.body;
+async function signup() {
+    try {
+        const existingUser = await User.findOne({ email });
+        if (existingUser) {
+            return res.status(400).json({ message: "User already exists" });
+        }
+    } catch (err) {
+    }
+}
+});
+
+
 module.exports = router;
